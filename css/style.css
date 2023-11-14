@@ -36,6 +36,7 @@ main {
     padding: 20px;
     background-color: var(--cor0);
     font-family: 'Anton', sans-serif;
+    font-size: 1.5em;
 }
 
 .nav > ul {
