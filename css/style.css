@@ -101,15 +101,15 @@ main {
 #iconHum {
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-image: url(../icons/hum.png)
+    /* background-size: cover;
+    background-image: url(../icons/hum.png) */
 }
 
 #iconXis {
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-image: url(../icons/Xis.png);
+    /* background-size: cover;
+    background-image: url(../icons/Xis.png); */
     transform: rotateY(180deg);
     display: flex;
     align-items: center;
