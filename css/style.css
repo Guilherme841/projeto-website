@@ -62,3 +62,59 @@ main {
 .nav>ul>li>a:hover {
     cursor: pointer;
 }
+
+#containerIcon {
+    perspective: 800px;
+}
+
+#containerIcon > #icons {
+    cursor: pointer;
+}
+
+.is-closed {
+    animation: scale 500ms ease-in-out;
+    transform: rotateY(0deg);
+}
+
+.is-open {
+    transform: rotateY(180deg);
+}
+
+#icons {
+    transition: transform 200ms ease-in-out;
+    transform-style: preserve-3d;
+    width: 35px;
+    height: 35px;
+}
+
+.icons {
+    width: 35px;
+    height: 35px;
+}
+
+#iconHum,
+#iconXis {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+#iconHum {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(../icons/hum.png)
+}
+
+#iconXis {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(../icons/Xis.png);
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5em;
+}
+

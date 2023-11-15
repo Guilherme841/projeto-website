@@ -1,16 +1,11 @@
-let icon = document.querySelector(".icon");
+let icons = document.getElementById("icons");
 
-icon.addEventListener("click", function () {
-
-  let iconImg = document.getElementById("iconImg");
-  let getIconImgSrc = iconImg.getAttribute("src");
-  let setIconImgSrc;
-  if (getIconImgSrc === "icons/menu.png") {
-    setIconImgSrc = iconImg.setAttribute("src", "icons/xis.png");
-  } else {
-    setIconImgSrc = iconImg.setAttribute("src", "icons/menu.png");
+icons.addEventListener("click", function () {
+  if (!this.classList.contains("is-open")) {
+    this.classList.remove("is-closed");
+    this.classList.add("is-open");
+  } else if (this.classList.contains("is-open")) {
+    this.classList.remove("is-open");
+    this.classList.add("is-closed");
   }
-  //    let iconImgSrc = iconImg.getAttribute("src");
-  //    iconImgSrc = "icons/xis.png"
-  //    console.log(iconImgSrc);
-});
+})
