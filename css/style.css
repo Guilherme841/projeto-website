@@ -28,20 +28,28 @@ main {
     background-color: gray;
     width: 100%;
     height: 4000px;
+    margin-top: 114px;
 }
+
+/* header {
+    opacity: 20%;
+} */
 
 .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
     width: 100%;
     background-color: var(--cor0);
     font-family: 'Anton', sans-serif;
     font-size: 1.5em;
 }
 
-.nav > h1 {
+.nav>h1 {
     margin: 30px;
 }
 
@@ -69,50 +77,55 @@ main {
     cursor: pointer;
 }
 
-#containerIcon {
-    margin: 30px;
-    perspective: 800px;
+#containerLinhas {
+    margin-right: 20px;
 }
 
-#containerIcon > #icons {
-    cursor: pointer;
+#linha1,
+#linha2,
+#linha3 {
+    /* position: absolute; */
+    transition: 500ms;
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background-color: rgb(0, 0, 0);
 }
 
-#icons {
-    transition: transform 200ms ease-in-out;
-    transform-style: preserve-3d;
-    width: 35px;
-    height: 35px;
+.openMenu > #linha1 {
+    transform: rotate(45deg) translateY(5px);
 }
 
-
-#iconHum,
-#iconXis {
-    position: absolute;
-    backface-visibility: hidden;
+.openMenu > #linha2 {
+    /* transition: 1s;
+    opacity: 0; */
+    display: none;
 }
 
-#iconHum {
-    width: 100%;
+.openMenu > #linha3 {
+    transform: rotate(-45deg) translateY(-5px);
+}
+
+#columNav {
+    transform: translateX(-300px);
+    position: fixed;
+    width: 40%;
     height: 100%;
+    background-color: var(--cor1);
 }
 
-#iconXis {
-    width: 100%;
-    height: 100%;
-    transform: rotateY(180deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 5em;
+@keyframes faded {
+    from {
+        transform: translateX(-300px);
+    } to {
+        transform: translateX(0px);
+    }
 }
 
-.is-closed {
-    animation: scale 500ms ease-in-out;
-    transform: rotateY(0deg);
-}
-
-.is-open {
-    transform: rotateY(180deg);
+@keyframes fadedOut {
+    100% {
+        transform: translateX(-300px);
+    } 0% {
+        transform: translateX(0px);
+    }
 }
