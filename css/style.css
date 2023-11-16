@@ -97,10 +97,9 @@ body {
     transform: translateX(-300px);
     position: fixed;
     width: 40%;
-    height: 5000px;
+    height: 100%;
     background-color: var(--cor1);
     overflow-y: scroll;
-
 }
 
 @keyframes faded {
@@ -133,7 +132,6 @@ main {
     height: 4000px;
     margin-top: 114px;
 }
-
 
 /* MAIN */
 
