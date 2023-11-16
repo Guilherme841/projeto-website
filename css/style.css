@@ -31,12 +31,18 @@ main {
 }
 
 .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: fixed;
     width: 100%;
-    /* padding: 20px; */
     background-color: var(--cor0);
     font-family: 'Anton', sans-serif;
     font-size: 1.5em;
+}
+
+.nav > h1 {
+    margin: 30px;
 }
 
 
@@ -64,6 +70,7 @@ main {
 }
 
 #containerIcon {
+    margin: 30px;
     perspective: 800px;
 }
 
