@@ -91,13 +91,81 @@
 }
 
 #columNav {
-    transform: translateX(-300px);
+    /* transform: translateX(-300px); */
     position: fixed;
     width: 50%;
     height: 80%;
     padding-bottom: 100px;
     background-color: var(--cor1);
-    /* overflow-y: scroll; */
+    padding: 20px;
+}
+
+.containerOpAll {
+    cursor: pointer;
+    margin-bottom: 10px;
+    /* border: 1px solid red; */
+}
+
+.containerOp {
+    transition: 500ms;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: green; */
+}
+
+.opcao {
+    font-size: 1.5em;
+    /* background-color: rgb(0, 161, 0); */
+    margin-left: 20px;
+}
+
+.iconMais {
+    margin-right: 20px;
+}
+
+.risco1 {
+    width: 10px;
+    height: 2px;
+    background-color: black;
+    transform: rotate(90deg);
+    position: absolute;
+    transform: 300ms;
+}
+
+.risco2 {
+    transition: 300ms;
+    width: 10px;
+    height: 2px;
+    background-color: black;
+}
+
+.containerMais {
+    overflow: hidden;
+    transition: 300ms;
+    width: 100%;
+    height: 0px;
+    padding: 15px 0px 0px 15px;
+    /* background-color: lightcoral; */
+}
+
+.openOp .containerMais {
+    height: 300px;
+}
+
+.openOp .containerOp {
+    
+    padding: 20px;
+}
+
+.openOp .iconMais > .risco1 {
+    /* transition: 300ms; */
+    transform: rotate(540deg);
+}
+
+.openOp .iconMais > .risco2 {
+    /* transition: 300ms; */
+    transform: rotate(540deg);
 }
 
 @keyframes faded {
