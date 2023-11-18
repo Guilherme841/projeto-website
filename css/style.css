@@ -60,9 +60,10 @@
 }
 
 #containerLinhas {
-    /* cursor: pointer; */
+    cursor: pointer;
     margin-right: 20px;
     width: 30px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 #linha1,
@@ -94,15 +95,36 @@
     /* transform: translateX(-300px); */
     position: fixed;
     width: 50%;
-    height: 80%;
-    padding-bottom: 100px;
+    height: 100vh;
+    max-height: 70%;
+    overflow-y: auto;
     background-color: var(--cor1);
-    padding: 20px;
+    padding: 20px 20px 200px 20px;
+}
+
+#columNav::-webkit-scrollbar {
+    width: 10px;
+    /* largura da barra de rolagem inteira */
+}
+
+#columNav::-webkit-scrollbar-track {
+    background: var(--cor1);
+    /* cor da área de rastreamento */
+}
+
+#columNav::-webkit-scrollbar-thumb {
+    background-color: var(--cor0);
+    /* cor do polegar de rolagem */
+    border-radius: 50px;
+    /* arredondamento do polegar de rolagem */
+    border: 3px solid var(--cor1);
+    /* cria preenchimento em torno do polegar de rolagem */
 }
 
 .containerOpAll {
-    /* cursor: pointer; */
+    cursor: pointer;
     margin-bottom: 10px;
+    -webkit-tap-highlight-color: transparent;
     /* border: 1px solid red; */
 }
 
@@ -154,16 +176,16 @@
 }
 
 .openOp .containerOp {
-    
+
     padding: 20px;
 }
 
-.openOp .iconMais > .risco1 {
+.openOp .iconMais>.risco1 {
     /* transition: 300ms; */
     transform: rotate(540deg);
 }
 
-.openOp .iconMais > .risco2 {
+.openOp .iconMais>.risco2 {
     /* transition: 300ms; */
     transform: rotate(540deg);
 }

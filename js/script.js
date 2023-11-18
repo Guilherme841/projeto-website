@@ -1,20 +1,7 @@
 let containerLinhas = document.getElementById("containerLinhas");
 let columNav = document.getElementById("columNav");
-let containerOpAll = document.querySelectorAll(".containerOpAll");
-let containerOpAllArr = Array.from(containerOpAll);
 
-for (const elemento of containerOpAllArr) {
-  elemento.addEventListener("click", function () {
-    if (this.classList.contains("openOp")) {
-      this.classList.remove("openOp");
-    } else {
-      for (const e of containerOpAllArr) {
-        e.classList.remove("openOp");
-      }
-      this.classList.add("openOp");
-    }
-  })
-}
+// let containerOpAllArr = Array.from(containerOpAll);
 
 containerLinhas.addEventListener("click", function () {
   this.classList.toggle("openMenu");
@@ -23,4 +10,14 @@ containerLinhas.addEventListener("click", function () {
   } else {
     columNav.style.animation = "fadedOut 500ms ease-in-out forwards";
   }
+})
+
+let containerOpAll = document.querySelectorAll(".containerOpAll").forEach(elemento => {
+  elemento.addEventListener("click", function () {
+    if (elemento.classList.contains("openOp")) {
+      this.classList.remove("openOp");
+    } else {
+      this.classList.add("openOp")
+    }
+  })
 })
