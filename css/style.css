@@ -60,7 +60,7 @@
 }
 
 #containerLinhas {
-    cursor: pointer;
+    /* cursor: pointer; */
     margin-right: 20px;
     width: 30px;
 }
@@ -101,7 +101,7 @@
 }
 
 .containerOpAll {
-    cursor: pointer;
+    /* cursor: pointer; */
     margin-bottom: 10px;
     /* border: 1px solid red; */
 }
