@@ -104,91 +104,52 @@
 
 #columNav::-webkit-scrollbar {
     width: 10px;
-    /* largura da barra de rolagem inteira */
 }
 
 #columNav::-webkit-scrollbar-track {
     background: var(--cor1);
-    /* cor da área de rastreamento */
 }
 
 #columNav::-webkit-scrollbar-thumb {
     background-color: var(--cor0);
-    /* cor do polegar de rolagem */
     border-radius: 50px;
-    /* arredondamento do polegar de rolagem */
     border: 3px solid var(--cor1);
-    /* cria preenchimento em torno do polegar de rolagem */
 }
 
-.containerOpAll {
-    cursor: pointer;
-    margin-bottom: 10px;
-    -webkit-tap-highlight-color: transparent;
-    /* border: 1px solid red; */
-}
+.containerOpcoes {
 
-.containerOp {
-    transition: 500ms;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* background-color: green; */
-}
-
-.opcao {
-    font-size: 1.5em;
-    /* background-color: rgb(0, 161, 0); */
-    margin-left: 20px;
-}
-
-.iconMais {
-    margin-right: 20px;
-}
-
-.risco1 {
-    width: 10px;
-    height: 2px;
-    background-color: black;
-    transform: rotate(90deg);
-    position: absolute;
-    transform: 300ms;
-}
-
-.risco2 {
-    transition: 300ms;
-    width: 10px;
-    height: 2px;
-    background-color: black;
 }
 
 .containerMais {
+    cursor: pointer;
+    background-color: gray;
+}
+
+.containerMais > h2 {
+
+}
+
+.containerMaisOpcoes {
     overflow: hidden;
-    transition: 300ms;
-    width: 100%;
     height: 0px;
-    padding: 15px 0px 0px 15px;
-    /* background-color: lightcoral; */
+    background-color: lightgray;
 }
 
-.openOp .containerMais {
-    height: 300px;
+.containerMais:hover .containerMaisOpcoes{
+    height: 100px;
 }
 
-.openOp .containerOp {
 
-    padding: 20px;
+.containerMaisOpcoes > h3 {
+    
 }
 
-.openOp .iconMais>.risco1 {
-    /* transition: 300ms; */
-    transform: rotate(540deg);
+.containerMaisOpcoes > h3 > a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.openOp .iconMais>.risco2 {
-    /* transition: 300ms; */
-    transform: rotate(540deg);
-}
+/* animação do com js */
 
 @keyframes faded {
     from {
@@ -209,6 +170,8 @@
         transform: translateX(0px);
     }
 }
+
+/* animação do com js */
 
 /* HEADER */
 
