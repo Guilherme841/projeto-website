@@ -137,8 +137,9 @@
     background-color: lightgray;
 }
 
-.containerMais:hover ~ .containerMaisOpcoes {
+.openOp ~ .containerMaisOpcoes {
     height: 100px;
+    max-height: 1000px;
 }
 
 .containerMaisOpcoes > h3 {

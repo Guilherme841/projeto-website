@@ -1,7 +1,6 @@
 let containerLinhas = document.getElementById("containerLinhas");
 let columNav = document.getElementById("columNav");
 
-
 // let containerOpAllArr = Array.from(containerOpAll);
 
 containerLinhas.addEventListener("click", function () {
@@ -13,8 +12,13 @@ containerLinhas.addEventListener("click", function () {
   }
 })
 
-let containerOpAll = document.querySelectorAll(".containerOpAll").forEach(elemento => {
+let containerMais = document.querySelectorAll(".containerMais").forEach(elemento => {
   elemento.addEventListener("click", function () {
+    document.querySelectorAll(".openOp").forEach( removeOpenOp => {
+      if (removeOpenOp !== this) {
+        removeOpenOp.classList.remove("openOp")
+      }
+    })
     if (elemento.classList.contains("openOp")) {
       this.classList.remove("openOp");
     } else {
