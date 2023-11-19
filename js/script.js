@@ -1,6 +1,7 @@
 let containerLinhas = document.getElementById("containerLinhas");
 let columNav = document.getElementById("columNav");
 
+
 // let containerOpAllArr = Array.from(containerOpAll);
 
 containerLinhas.addEventListener("click", function () {

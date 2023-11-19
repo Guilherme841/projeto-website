@@ -122,6 +122,7 @@
 
 .containerMais {
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
     background-color: gray;
 }
 
@@ -130,15 +131,15 @@
 }
 
 .containerMaisOpcoes {
+    transition: 500ms;
     overflow: hidden;
     height: 0px;
     background-color: lightgray;
 }
 
-.containerMais:hover .containerMaisOpcoes{
+.containerMais:hover ~ .containerMaisOpcoes {
     height: 100px;
 }
-
 
 .containerMaisOpcoes > h3 {
     
