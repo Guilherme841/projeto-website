@@ -151,9 +151,9 @@
   height: 200px;
 }
 
-.containerMaisOpcoes > h3 {
-  /* margin-bottom: 15px; */
-}
+/* .containerMaisOpcoes > h3 {
+  margin-bottom: 15px;
+} */
 
 .containerMaisOpcoes > h3 > a {
   text-decoration: none;
