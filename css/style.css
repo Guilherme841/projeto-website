@@ -33,7 +33,7 @@
   font-family: "Anton", sans-serif;
   font-size: 1.5em;
   color: rgb(212, 211, 211);
-  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.280);
+  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.28);
 }
 
 .nav > h1 {
@@ -85,7 +85,6 @@
 
 .openMenu > #linha2 {
   transition: 500ms;
-  /* opacity: 0; */
   transform: translateX(-50px) translateY(20px) rotate(-180deg)
     translateX(-43px);
 }
@@ -103,9 +102,9 @@
   overflow-y: auto;
   background-color: var(--cor1);
   padding: 50px 20px 200px 20px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: rgb(209, 209, 209);
-  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.200);
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 #columNav::-webkit-scrollbar {
@@ -130,8 +129,6 @@
 .containerMais {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  /* margin-bottom: 20px;
-  padding-bottom: 5px; */
 }
 
 /* .containerMais > h2 {
@@ -152,7 +149,7 @@
 }
 
 /* .containerMaisOpcoes > h3 {
-  margin-bottom: 15px;
+  
 } */
 
 .containerMaisOpcoes > h3 > a {

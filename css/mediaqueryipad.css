@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 500px) and (max-width: 992px) {
+  #columNav {
+    transform: translateX(-800px);
+  }
+
+  @keyframes faded {
+    from {
+      transform: translateX(-800px);
+    }
+
+    to {
+      transform: translateX(0px);
+    }
+  }
+
+  @keyframes fadedOut {
+    100% {
+      transform: translateX(-800px);
+    }
+
+    0% {
+      transform: translateX(0px);
+    }
+  }
+}

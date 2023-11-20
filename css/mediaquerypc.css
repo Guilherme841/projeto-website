@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    background-color: transparent;
+  }
+  #containerLinhas {
+    display: none;
+  }
+  .nav > ul {
+    display: flex;
+    background-color: transparent;
+    letter-spacing: 3px;
+  }
+  .nav > ul > li {
+    color: rgb(212, 211, 211);
+
+  }
+
+  #columNav {
+    display: none;
+  }
+  main {
+    margin: 0;
+  }
+  section {
+    height: 100vh;
+    background-image: url(../imagens/pexels-philipp-martin-18274746.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
