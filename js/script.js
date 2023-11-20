@@ -10,19 +10,21 @@ containerLinhas.addEventListener("click", function () {
   } else {
     columNav.style.animation = "fadedOut 500ms ease-in-out forwards";
   }
-})
+});
 
-let containerMais = document.querySelectorAll(".containerMais").forEach(elemento => {
-  elemento.addEventListener("click", function () {
-    document.querySelectorAll(".openOp").forEach( removeOpenOp => {
-      if (removeOpenOp !== this) {
-        removeOpenOp.classList.remove("openOp")
+let containerMais = document
+  .querySelectorAll(".containerMais")
+  .forEach((elemento) => {
+    elemento.addEventListener("click", function () {
+      document.querySelectorAll(".openOp").forEach((removeOpenOp) => {
+        if (removeOpenOp !== this) {
+          removeOpenOp.classList.remove("openOp");
+        }
+      });
+      if (elemento.classList.contains("openOp")) {
+        this.classList.remove("openOp");
+      } else {
+        this.classList.add("openOp");
       }
-    })
-    if (elemento.classList.contains("openOp")) {
-      this.classList.remove("openOp");
-    } else {
-      this.classList.add("openOp")
-    }
-  })
-})
+    });
+  });
