@@ -14,13 +14,75 @@
   .nav > ul {
     display: flex;
     background-color: transparent;
+    /* gap: 20px; */
     letter-spacing: 3px;
   }
   .nav > ul > li {
-    color: rgb(212, 211, 211);
-
+    color: rgb(220, 220, 220);
   }
-
+  .linhaFaded {
+    width: 0%;
+    height: 2px;
+    background-color: gray;
+    margin: auto;
+  }
+  .onMouseA {
+    animation: linhaFaded 300ms ease-in-out forwards;
+  }
+  .outMouseA {
+    animation: linhaFadedOut 300ms ease-in-out forwards;
+  }
+  @keyframes linhaFaded {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes linhaFadedOut {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0%;
+    }
+  }
+  .containerAOpcoes {
+    opacity: 0;
+    max-height: 500px;
+    max-width: 500px;
+    transition: 150ms ease-in-out;
+    overflow: hidden;
+    position: absolute;
+    background-color: gray;
+    transform: translateY(20px);
+    padding: 15px;
+    pointer-events: none;
+  }
+  .aOpcoes {
+    padding: 30px 0px;
+  }
+  .aOpcoes:hover ~ .containerAOpcoes {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  .espaçoInvisivel:hover ~ .containerAOpcoes {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  .containerAOpcoes:hover {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  .containerAOpcoes > a {
+    text-decoration: none;
+    color: inherit;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.350);
+    letter-spacing: 1px;
+    display: grid;
+    padding: 5px;
+  }
   #columNav {
     display: none;
   }

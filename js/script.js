@@ -28,3 +28,13 @@ let containerMais = document
       }
     });
   });
+
+function linhaFaded(event) {
+  event.target.nextElementSibling.classList.add("onMouseA");
+  event.target.nextElementSibling.classList.remove("outMouseA");
+}
+
+function linhaFadedOut(event) {
+  event.target.nextElementSibling.classList.add("outMouseA");
+  event.target.nextElementSibling.classList.remove("onMouseA");
+}

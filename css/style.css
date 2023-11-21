@@ -53,12 +53,16 @@
 
 .nav > ul > li > a {
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
   text-decoration: none;
   color: inherit;
+  transition: 300ms;
 }
 
 .nav > ul > li > a:hover {
   cursor: pointer;
+  color: rgb(215, 215, 215);
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.300);
 }
 
 #containerLinhas {
@@ -97,8 +101,8 @@
   transform: translateX(-300px);
   position: fixed;
   width: 50%;
-  height: 100vh;
   max-height: 70%;
+  height: 100vh;
   overflow-y: auto;
   background-color: var(--cor1);
   padding: 50px 20px 200px 20px;
