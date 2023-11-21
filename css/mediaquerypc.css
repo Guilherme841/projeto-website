@@ -89,10 +89,4 @@
   main {
     margin: 0;
   }
-  section {
-    height: 100vh;
-    background-image: url(../imagens/pexels-philipp-martin-18274746.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 }
