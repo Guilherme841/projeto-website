@@ -215,6 +215,7 @@ main {
 
 .containerDivInContainerBackground {
   text-align: center;
+  transform: translateY(-100px);
 }
 
 .containerDivInContainerBackground > div {
