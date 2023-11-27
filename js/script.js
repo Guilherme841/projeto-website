@@ -1,7 +1,8 @@
 let containerLinhas = document.getElementById("containerLinhas");
 let columNav = document.getElementById("columNav");
-
-// let containerOpAllArr = Array.from(containerOpAll);
+let radioImgs = document.getElementsByClassName("radioImgs");
+let showMore = document.getElementsByClassName("showMore");
+let containerShowMore = document.getElementsByClassName("containerShowMore");
 
 containerLinhas.addEventListener("click", function () {
   this.classList.toggle("openMenu");
@@ -37,4 +38,15 @@ function linhaFaded(event) {
 function linhaFadedOut(event) {
   event.target.nextElementSibling.classList.add("outMouseA");
   event.target.nextElementSibling.classList.remove("onMouseA");
+}
+
+for (elemento of radioImgs) {
+  elemento.addEventListener("click", function () {});
+}
+
+for (elemento of showMore) {
+  elemento.addEventListener("click", function() {
+    let thisParent = this.parentNode;
+    thisParent.classList.toggle("containerShowMoreOpen");
+  })
 }

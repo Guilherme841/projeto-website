@@ -89,6 +89,9 @@
   main {
     margin: 0;
   }
+  .containerDivInContainerBackground {
+    width: auto;
+  }
   .linkBackground {
     display: inline-flexbox;
     width: 100px;

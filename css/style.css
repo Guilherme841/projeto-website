@@ -12,7 +12,8 @@
 }
 
 html, body {
-  width: 100%;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 :root {
@@ -30,6 +31,7 @@ html, body {
 
 header {
   position: fixed;
+  z-index: 1;
   width: 100%;
 }
 
@@ -202,12 +204,13 @@ header {
 
 main {
   background-color: gray;
-  width: 100%;
+  width: 100vw;
   height: 4000px;
   /* margin-top: 114px; */
 }
 
 .containerBackground {
+  width: 100vw;
   height: 100vh;
   background-image: url(../imagens/dolomites-8208541_1920.jpg);
   background-repeat: no-repeat;
@@ -219,6 +222,7 @@ main {
 }
 
 .containerDivInContainerBackground {
+  width: 100vw;
   text-align: left;
   padding: 10px;
 }
@@ -227,7 +231,12 @@ main {
   margin: 0px 10px;
 }
 
+/* .containerDivInBackground {
+  
+} */
+
 .h1Background {
+  overflow: hidden;
   font-size: 3em;
   margin-bottom: 15px;
   font-family: var(--font-anton);
@@ -238,7 +247,7 @@ main {
 }
 
 .pBackground {
-  text-align: justify;
+  overflow: hidden;
   text-indent: 20px;
   font-size: 1.2em;
   color: rgb(209, 209, 209);
@@ -266,22 +275,25 @@ main {
 }
 
 .section2 {
-  height: 100vh;
-  background-color: rgb(49, 49, 49);
-  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(192, 192, 192);
+  display: grid;
   align-items: center;
   justify-content: center;
 }
 .containerSection2 {
-  
+  width: 100%;
+  /* padding: 15px; */
+  background-color: rgb(63, 63, 63);
 }
 .containerImgs {
-  
+  width: 100%;
 }
 .boxImg {
+  margin: 10px;
   width: 250px;
   height: 250px;
-  
 }
 .imgDiv {
   width: 100%;
@@ -290,7 +302,66 @@ main {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
+.containerShowMore {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  text-align: left;
+  text-indent: 15px;
+  color: white;
+  height: 40px;
+  background-color: rgba(99, 138, 99, 0.400);
+  transition: 300ms;
+}
+.paraInfo {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 1em;
+  font-family: var(--font-roboto);
+}
+.showMore {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  text-wrap: nowrap;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  color: white;
+  font-family: var(--font-roboto);
+  padding: 0px 10px;
+}
+.containerShowMoreOpen {
+  display: block;
+  height: 100%;
+  
+  background-color: rgba(99, 138, 99, 0.800);
+}
+.containerShowMoreOpen > .paraInfo{
+  padding: 10px;
+  text-align: justify;
+  white-space: inherit;
+  text-overflow: inherit;
+}
+.containerShowMoreOpen > .showMore{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-bottom: 10px;
+  color: white;
+  text-align: right;
+}
+/* .infoImg::after {
+  content: "Show more";
+} */
+/* .radioImgs {
+
+} */
 /* MAIN */
 
 /* FOOTER */
