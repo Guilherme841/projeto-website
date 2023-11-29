@@ -14,7 +14,7 @@
 html, body {
   overflow-x: hidden;
   width: 100vw;
-  scroll-padding-top: 114px;
+  /* scroll-padding-top: 130px; */
 }
 
 :root {
@@ -46,7 +46,6 @@ header {
   font-size: 1.5em;
   color: rgb(212, 211, 211);
   text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.28);
-  opacity: 50%;
 }
 
 .nav > h1 {
@@ -208,7 +207,6 @@ main {
   background-color: gray;
   width: 100vw;
   height: 4000px;
-  /* margin-top: 114px; */
 }
 
 .containerBackground {
@@ -416,6 +414,10 @@ main {
 .span-mais {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+}
+
+.section3 {
+  
 }
 /* MAIN */
 
