@@ -47,7 +47,3 @@ let spanMais = document.querySelectorAll(".span-mais").forEach(function(element)
     }
   })
 })
-
-// let slide = document.getElementById("slide-1");
-// slide.style.justifyContent = ""
-
