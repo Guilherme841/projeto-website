@@ -14,7 +14,7 @@
 html, body {
   overflow-x: hidden;
   width: 100vw;
-  /* scroll-padding-top: 130px; */
+  scroll-padding-top: 130px;
 }
 
 :root {
@@ -417,8 +417,10 @@ main {
 }
 
 .section3 {
-  
+  height: 100vh;
+  background-color: #033631;
 }
+/* verde forte  #033631*/
 /* MAIN */
 
 /* FOOTER */
