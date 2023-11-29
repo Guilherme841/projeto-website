@@ -291,9 +291,9 @@ main {
   grid-column-gap: 0;
   grid-row-gap: 0;
   width: 100%;
-  height: 800px;
+  min-height: 800px;
   align-content: center;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .slider-wrapper {
@@ -340,17 +340,18 @@ main {
   border-radius: 50%;
   background-color: white;
   text-decoration: none;
-  transition: opacity ease-in-out 200ms;
+  transition: background-color ease-in-out 200ms;
 }
 .slider-nav > a:hover {
   opacity: 0.8;
+  background-color: var(--cor0);
 }
 
 .cards {
   position: relative;
   overflow: hidden;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   background-color: lightcoral;
 }
 
@@ -363,6 +364,9 @@ main {
   position: absolute;
   bottom: 0;
   color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* MAIN */
