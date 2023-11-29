@@ -223,7 +223,7 @@ main {
 
 .containerDivInContainerBackground {
   width: 100vw;
-  text-align: left;
+  /* text-align: left; */
   padding: 10px;
 }
 
@@ -275,93 +275,67 @@ main {
 }
 
 .section2 {
-  width: 100%;
   min-height: 100vh;
-  background-color: rgb(192, 192, 192);
   display: grid;
+  justify-content: center;
   align-items: center;
+  background-color: rgb(192, 192, 192);
+}
+
+.container-slides {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  width: 400px;
+  height: 800px;
+  background-color: lightgreen;
+  align-content: center;
+  overflow-x: hidden;
+}
+
+.slider-wrapper {
+  
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+#slider-1, #slider-2, #slider-3 {
+  gap: 10px;
+}
+
+.slider > div {
+  display: grid;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 100%;
+  /* object-fit: cover; */ /* Ocupa todo espaço para video e imgs */
+  scroll-snap-align: start;
+  align-content: center;
   justify-content: center;
 }
-.containerSection2 {
-  width: 100%;
-  /* padding: 15px; */
-  background-color: rgb(63, 63, 63);
-}
-.containerImgs {
-  width: 100%;
-}
-.boxImg {
-  margin: 10px;
-  width: 250px;
-  height: 250px;
-}
-.imgDiv {
-  width: 100%;
-  height: 100%;
-  background-image: url(../imagens/ponte.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.containerShowMore {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  overflow: hidden;
-  text-align: left;
-  text-indent: 15px;
-  color: white;
-  height: 40px;
-  background-color: rgba(99, 138, 99, 0.400);
-  transition: 300ms;
-}
-.paraInfo {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  font-size: 1em;
-  font-family: var(--font-roboto);
-}
-.showMore {
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  text-wrap: nowrap;
-  background-color: transparent;
-  outline: 0;
-  border: 0;
-  color: white;
-  font-family: var(--font-roboto);
-  padding: 0px 10px;
-}
-.containerShowMoreOpen {
-  display: block;
-  height: 100%;
-  
-  background-color: rgba(99, 138, 99, 0.800);
-}
-.containerShowMoreOpen > .paraInfo{
-  padding: 10px;
-  text-align: justify;
-  white-space: inherit;
-  text-overflow: inherit;
-}
-.containerShowMoreOpen > .showMore{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding-bottom: 10px;
-  color: white;
-  text-align: right;
-}
-/* .infoImg::after {
-  content: "Show more";
-} */
-/* .radioImgs {
 
-} */
+.slider-nav {
+ 
+}
+
+.slider-nav > a {
+
+}
+
+.cards {
+  width: 200px;
+  height: 200px;
+  background-color: lightcoral;
+}
+
+
 /* MAIN */
 
 /* FOOTER */

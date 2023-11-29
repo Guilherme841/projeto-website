@@ -1,8 +1,11 @@
 let containerLinhas = document.getElementById("containerLinhas");
 let columNav = document.getElementById("columNav");
-let radioImgs = document.getElementsByClassName("radioImgs");
-let showMore = document.getElementsByClassName("showMore");
 let containerShowMore = document.getElementsByClassName("containerShowMore");
+let showMore = document.getElementsByClassName("showMore");
+let radioImgs = document.getElementsByClassName("radioImgs");
+let radioImg1 = document.getElementById("radioImg1");
+let radioImg2 = document.getElementById("radioImg2");
+let containerImgs = document.getElementsByClassName("containerImgs");
 
 containerLinhas.addEventListener("click", function () {
   this.classList.toggle("openMenu");
@@ -40,13 +43,32 @@ function linhaFadedOut(event) {
   event.target.nextElementSibling.classList.remove("onMouseA");
 }
 
-for (elemento of radioImgs) {
-  elemento.addEventListener("click", function () {});
+for (elementoRadio of radioImgs) {
+  elementoRadio.addEventListener("click", function () {
+    if (this.id === "radioImg1") {
+      for (let i = 0; i < containerImgs.length; i++) {
+        containerImgs[i].classList.add("containerImgsFadedOut");
+        containerImgs[i].classList.remove("containerImgsFadedIn");
+      }
+    } else if (this.id === "radioImg2") {
+      for (let i = 0; i < containerImgs.length; i++) {
+        containerImgs[i].classList.add("containerImgsFadedIn");
+        containerImgs[i].classList.remove("containerImgsFadedOut");
+      }
+    }
+  });
 }
 
 for (elemento of showMore) {
-  elemento.addEventListener("click", function() {
+  elemento.addEventListener("click", function () {
     let thisParent = this.parentNode;
+    let thisButton = this;
+    thisButton.classList.toggle("open");
+    if (thisButton.classList.contains("open")) {
+      thisButton.innerHTML = "Show Less";
+    } else {
+      thisButton.innerHTML = "Show More";
+    }
     thisParent.classList.toggle("containerShowMoreOpen");
-  })
+  });
 }
