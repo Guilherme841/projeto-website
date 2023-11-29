@@ -14,6 +14,7 @@
 html, body {
   overflow-x: hidden;
   width: 100vw;
+  scroll-padding-top: 114px;
 }
 
 :root {
@@ -305,6 +306,10 @@ main {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 }
+.slider::-webkit-scrollbar {
+  opacity: 0;
+  display: none;
+}
 
 #slider-1, #slider-2, #slider-3 {
   gap: 10px;
@@ -322,11 +327,15 @@ main {
 }
 
 .slider-nav {
- 
+  margin: auto;
 }
 
 .slider-nav > a {
-
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  text-decoration: none;
 }
 
 .cards {
