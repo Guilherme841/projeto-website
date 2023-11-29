@@ -1,13 +1,5 @@
-let containerLinhas = document.getElementById("containerLinhas");
-let columNav = document.getElementById("columNav");
-let containerShowMore = document.getElementsByClassName("containerShowMore");
-let showMore = document.getElementsByClassName("showMore");
-let radioImgs = document.getElementsByClassName("radioImgs");
-let radioImg1 = document.getElementById("radioImg1");
-let radioImg2 = document.getElementById("radioImg2");
-let containerImgs = document.getElementsByClassName("containerImgs");
-
-containerLinhas.addEventListener("click", function () {
+let containerLinhas = document.getElementById("containerLinhas").addEventListener("click", function() {
+  let columNav = document.getElementById("columNav");
   this.classList.toggle("openMenu");
   if (this.classList.contains("openMenu")) {
     columNav.style.animation = "faded 500ms ease-in-out forwards";
@@ -43,32 +35,19 @@ function linhaFadedOut(event) {
   event.target.nextElementSibling.classList.remove("onMouseA");
 }
 
-for (elementoRadio of radioImgs) {
-  elementoRadio.addEventListener("click", function () {
-    if (this.id === "radioImg1") {
-      for (let i = 0; i < containerImgs.length; i++) {
-        containerImgs[i].classList.add("containerImgsFadedOut");
-        containerImgs[i].classList.remove("containerImgsFadedIn");
-      }
-    } else if (this.id === "radioImg2") {
-      for (let i = 0; i < containerImgs.length; i++) {
-        containerImgs[i].classList.add("containerImgsFadedIn");
-        containerImgs[i].classList.remove("containerImgsFadedOut");
-      }
-    }
-  });
-}
-
-for (elemento of showMore) {
-  elemento.addEventListener("click", function () {
-    let thisParent = this.parentNode;
-    let thisButton = this;
-    thisButton.classList.toggle("open");
-    if (thisButton.classList.contains("open")) {
-      thisButton.innerHTML = "Show Less";
+let spanMais = document.querySelectorAll(".span-mais").forEach(function(element) {
+  element.addEventListener("click", function() {
+    let containerInfo = element.parentNode;
+    let elementThis = this;
+    containerInfo.classList.toggle("open");
+    if (containerInfo.classList.contains("open")) {
+      elementThis.innerHTML = "-"
     } else {
-      thisButton.innerHTML = "Show More";
+      elementThis.innerHTML = "+"
     }
-    thisParent.classList.toggle("containerShowMoreOpen");
-  });
-}
+  })
+})
+
+// let slide = document.getElementById("slide-1");
+// slide.style.justifyContent = ""
+
