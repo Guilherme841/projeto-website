@@ -4,7 +4,6 @@
   #columNav {
     transform: translateX(-800px);
   }
-
   @keyframes faded {
     from {
       transform: translateX(-800px);
@@ -23,5 +22,8 @@
     0% {
       transform: translateX(0px);
     }
+  }
+  .card-ipad {
+    display: block;
   }
 }
