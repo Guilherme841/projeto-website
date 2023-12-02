@@ -144,4 +144,15 @@
   .slider-pc {
     display: none;
   }
+  .box-img {
+    justify-self: center;
+    border-radius: 20px;
+  }
+  .box-section-3 > a {
+    transition: 300ms;
+    margin: auto;
+  }
+  .box-section-3 > a:hover {
+    transform: scale(1.2);
+  }
 }

@@ -45,5 +45,11 @@
     width: 200px;
     height: 200px;
   }
-  
+  .box-img {
+    justify-self: center;
+    border-radius: 20px;
+  }
+  .box-section-3 > a {
+    justify-self: right;
+  }
 }
