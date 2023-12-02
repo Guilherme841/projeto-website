@@ -51,3 +51,17 @@ let spanMais = document
       }
     });
   });
+
+window.addEventListener("scroll", function() {
+  let nav = document.getElementById("nav");
+  let scrollTop = document.documentElement.scrollTop;
+  if (matchMedia("(min-width: 1024px)").matches) {
+    if (scrollTop > 150) {
+      nav.style.transition = "300ms"
+      nav.style.backgroundColor = "#10403B"
+    } else {
+      nav.style.transition = "300ms"
+      nav.style.backgroundColor = "transparent"
+    }
+  }
+})

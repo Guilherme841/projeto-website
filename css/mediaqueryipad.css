@@ -1,6 +1,21 @@
 @charset "UTF-8";
 
+:root {
+  --cor0: #127369;
+  --cor1: #10403b;
+  --cor2: #8aa6a3;
+  --cor3: #4c5958;
+  --cor4: #bfbfbf;
+  --font-noto: "Noto Serif JP", serif;
+  --font-anton: "Anton", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+}
+
+
 @media screen and (min-width: 500px) and (max-width: 1024px) {
+  .containerDivInContainerBackground {
+    width: 90%;
+  }
   #columNav {
     transform: translateX(-800px);
   }
@@ -26,4 +41,9 @@
   .card-ipad {
     display: block;
   }
+  .cards {
+    width: 200px;
+    height: 200px;
+  }
+  
 }
