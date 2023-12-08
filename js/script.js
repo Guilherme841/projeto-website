@@ -63,5 +63,5 @@ window.addEventListener("scroll", function() {
       nav.style.transition = "300ms"
       nav.style.backgroundColor = "transparent"
     }
-  }
+  } 
 })
